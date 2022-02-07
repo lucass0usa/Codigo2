@@ -1,0 +1,16 @@
+/*Escreva um algoritmo para ler as notas da 1a e 2a avaliações de um aluno, calcule e
+imprima a média aritmética simples desse aluno. Só devem ser aceitos valores
+válidos durante a leitura (0 a 10) para cada nota. Acrescente uma mensagem 'NOVO
+CÁLCULO (S/N)?' ao final de modo que se for respondido 'S' deve retornar e
+executar um novo cálculo, caso contrário deverá limpar a tela, agradecer e encerrar
+o algoritmo.*/  
+
+#include <stdio.h>
+#include "biblio.h"
+
+// Função principal que retorna a função calculaMedia
+void main()
+{   
+    calculaMedia();
+}
+

@@ -1,0 +1,55 @@
+#include <stdio.h>
+// Criando a função calculaMedia
+void calculaMedia() 
+{
+    float ap1, ap2, media;
+    char conf = 's';
+
+    // Limpeza do sistema, para evitar poluição de dados
+    system("clear");
+
+    // Comandos e testes
+    do {
+        printf("\n\nDigite a nota da sua 1° avaliação: "); scanf(" %f", &ap1);
+          if(ap1<0 || ap1>10)
+            {
+                printf("\nA nota informada deve estar entre 0 e 10, informe-a novamente.");
+            }
+    } while(ap1<0 || ap1>10);
+
+    do {
+        printf("\n\nDigite a nota da sua 2° avaliação: "); scanf(" %f", &ap2);
+          if(ap2<0 || ap2>10)
+            {
+                printf("\nA nota informada deve estar entre 0 e 10, informe-a novamente.");
+            }
+    } while(ap2<0 || ap2>10);
+
+    // Declaração da media
+    media = (ap1+ap2)/2;
+
+    // Resultado da media
+    if (media>=7.0) {
+       printf("\nAprovado com média aritmética simples igual a : %.2f", media);
+    } 
+    else 
+    {
+       printf("\nReprovado com média aritmética simples igual a : %.2f", media);
+    }
+
+    
+    // Comando if para perguntar ao usuario se ele quer ou nao refazer a simulação
+    printf("\n\nDeseja realizar um novo cálculo? (S/N): "); scanf(" %c", &conf);
+    
+    // Se sim, ele retorna o calculaMedia, se não, o algoritmo agradece o seu uso
+    if(conf != 'n' && conf != 'N') 
+    {
+      calculaMedia();
+    } 
+    
+    else 
+    {
+      system("clear");
+      printf("\nObrigado por usar o algoritmo!");
+    }
+}
